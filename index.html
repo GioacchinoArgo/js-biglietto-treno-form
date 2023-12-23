@@ -16,10 +16,10 @@
 </head>
 <body>
     <main class="container">
-        <!-- ticket info -->
+        <!-- ticket form -->
         <section id="form-section" class="m-4">
             <h1 class="text-uppercase text-center fs-2 pb-3 pt-4 fw-bolder text-light">calcola il prezzo del tuo biglietto</h1>
-            <div class="card cb-color shadow-lg">
+            <div class="card cb-color">
                 <div class="card-body cb-color rounded pt-5 pb-2">
                     <div class="row row-cols-1 row-cols-3 px-5">
                         <div class="col text-center px-5">
@@ -31,7 +31,7 @@
                         <div class="col text-center px-5">
                             <div class="mb-3">
                                 <label for="user-km" class="form-label fw-semibold text-white fs-5">Km da percorrere</label>
-                                <input type="number" class="form-control txt-color fw-semibold text-center" id="user-km">
+                                <input type="number" class="form-control txt-color fw-semibold text-center" id="user-km" min="1" max="1000" value="10">
                             </div>
                         </div>
                         <div class="col text-center px-5">
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-footer d-flex justify-content-center gap-5 border-top-0 pt-4">
+                <div class="card-footer d-flex justify-content-center gap-5 border-top-0 pt-4z">
                     <button class="btn btn-danger btn-lg" id="generate-button">Genera</button>
                     <button class="btn btn-danger btn-lg" id="reset-button">Annulla</button>
                 </div>
@@ -52,6 +52,44 @@
 
         </section>
 
+        <!-- ticket section -->
+        <section id="ticket-section" class="m-4">
+            <div class="card mb-3 cb-color">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h3 class="text-uppercase fs-4 text-white">dettaglio passeggeri</h3>
+                            <div class="card border-0">
+                                <div class="row row-cols-1 row-cols-5">
+                                    <div class="col">
+                                        <div class="bc-color-name rounded-1 text-center">
+                                            <h4 class="card-title text-uppercase fs-5 pt-4">nome passeggero</h4>
+                                            <h5 id="passenger-name" class="mb-0 mt-5 pb-4"></h5>
+                                        </div>
+                                    </div>
+                                    <div class="col text-center">
+                                        <h6 class="mt-4">Offerta</h6>
+                                        <div id="rate" class="mb-0 mt-5"></div>
+                                    </div>
+                                    <div class="col text-center">
+                                        <h6 class="mt-4">Carrozza</h6>
+                                        <div id="traincar" class="mb-0 mt-5"></div>
+                                    </div>
+                                    <div class="col text-center">
+                                        <h6 class="mt-4">Codice CP</h6>
+                                        <div id="cp-code" class="mb-0 mt-5"></div>
+                                    </div>
+                                    <div class="col text-center">
+                                        <h6 class="mt-4">Costo Biglietto</h6>
+                                        <div id="price" class="mb-0 mt-5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
     </main>
 
 
